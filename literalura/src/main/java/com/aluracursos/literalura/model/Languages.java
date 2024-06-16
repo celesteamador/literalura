@@ -8,7 +8,7 @@ public enum Languages {
     ITALIAN("it"),
     RUSSIAN("ru");
 
-    private String languages;
+    private final String languages;
 
     Languages(String languages) {
         this.languages = languages;
