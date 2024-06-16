@@ -15,9 +15,9 @@ public enum Languages {
     }
 
     public static Languages fromString(String text) {
-        for (Languages languages : Languages.values()) {
-            if (languages.languages.equalsIgnoreCase(text)) {
-                return languages;
+        for (Languages categoria : Languages.values()) {
+            if (categoria.languages.equalsIgnoreCase(text)) {
+                return categoria;
             }
         }
         throw new IllegalArgumentException("Language " + text + " not found");

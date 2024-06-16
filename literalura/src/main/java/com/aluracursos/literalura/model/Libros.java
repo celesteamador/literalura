@@ -89,6 +89,8 @@ public class Libros {
         this.languages = languages;
     }
 
-
+    public Libros(Languages languages) {
+        this.languages = languages;
+    }
 }
 
