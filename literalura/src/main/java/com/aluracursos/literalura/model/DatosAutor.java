@@ -10,6 +10,4 @@ public record DatosAutor(
     @JsonAlias("death_year") Integer dearhYear,
     @JsonAlias("title")String libros
 ){
-    public void add(DatosAutor datosAutor) {
-    }
 }

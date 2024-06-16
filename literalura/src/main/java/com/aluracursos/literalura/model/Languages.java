@@ -8,18 +8,19 @@ public enum Languages {
     ITALIAN("it"),
     RUSSIAN("ru");
 
-    private String lang;
-    Languages(String lang) {
-        this.lang = lang;
+    private String languages;
+
+    Languages(String languages) {
+        this.languages = languages;
     }
 
     public static Languages fromString(String text) {
-        for (Languages languages : Languages.values())
-            if(languages.lang.equalsIgnoreCase(text)){
+        for (Languages languages : Languages.values()) {
+            if (languages.languages.equalsIgnoreCase(text)) {
                 return languages;
             }
+        }
         throw new IllegalArgumentException("Language " + text + " not found");
     }
-
 }
 

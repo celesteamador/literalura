@@ -86,7 +86,6 @@ public class Principal {
         DatosLibros datosLibros = getDatosLibros();
         Libros libros = new Libros(datosLibros);
         repository.save(libros);
-        datosLibros.add(datosLibros);
         System.out.println(datosLibros);
     }
 
@@ -95,7 +94,7 @@ public class Principal {
         libros = repository.findAll();
 
         libros.stream()
-                .sorted(Comparator.comparing(Libros::getLanguages))
+                .sorted(Comparator.comparing(Libros::getTitulo))
                 .forEach(libro -> System.out.println(libro));
 
     }

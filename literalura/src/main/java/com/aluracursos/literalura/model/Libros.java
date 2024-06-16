@@ -1,11 +1,8 @@
 package com.aluracursos.literalura.model;
-
 import jakarta.persistence.*;
 import jdk.jfr.Relational;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.apache.coyote.http11.Constants.a;
 
 @Entity
@@ -28,7 +25,7 @@ public class Libros {
     public Libros(DatosLibros datosLibros) {
         this.titulo = datosLibros.titulo();
         this.topic = datosLibros.topic();
-        this.languages = Languages.fromString(languages.name());
+        this.languages = Languages.fromString(String.valueOf(datosLibros.languages()));
         this.topic = datosLibros.topic();
         for (Autor autor : autor) {
             autor.setLibros(this);
@@ -70,9 +67,6 @@ public class Libros {
     public List<Autor> getAutor() {
         return autor;
     }
-    public void setLanguages(Languages languages) {
-        this.languages = languages;
-    }
 
     public String getTopic() {
         return topic;
@@ -90,6 +84,11 @@ public class Libros {
     public Languages getLanguages() {
         return languages;
     }
+
+    public void setLanguages(Languages languages) {
+        this.languages = languages;
+    }
+
 
 }
 

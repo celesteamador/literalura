@@ -9,10 +9,8 @@ import java.util.List;
 public record DatosLibros(
         @JsonAlias("title") String titulo,
         @JsonAlias("authors") List<Autor> autor,
-        @JsonAlias("languages") Languages language,
+        @JsonAlias("languages") Languages languages,
         @JsonAlias("subjects") String topic,
         @JsonAlias("id") Integer libroId
 ) {
-    public void add(DatosLibros datosLibros) {
-    }
 }
